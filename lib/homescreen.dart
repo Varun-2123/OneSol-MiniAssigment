@@ -57,7 +57,12 @@ class _HomescreenState extends State<Homescreen> {
       resizeToAvoidBottomInset: false,
       body:
           videoPaths.isEmpty
-              ? const Center(child: Text("No videos saved yet"))
+              ? const Center(
+                child: Text(
+                  "No videos saved yet",
+                  style: TextStyle(color: Colors.white),
+                ),
+              )
               : PageView.builder(
                 scrollDirection: Axis.vertical,
                 itemCount: videoPaths.length,
